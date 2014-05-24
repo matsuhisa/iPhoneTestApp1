@@ -7,9 +7,7 @@
 
 @implementation MovieWatch
 
-
 -(id) initWithName:(NSString *)name location:(NSString *)location date:(NSDate *)date money:(NSNumber *)money
-//-(id) initWithName:(NSString *)name location:(NSString *)location date:(NSDate *)date
 {
     self = [super init];
     if (self) {

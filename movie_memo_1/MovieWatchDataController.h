@@ -16,6 +16,8 @@
 - (NSUInteger)countOfList;
 - (MovieWatch *)objectInListAtIndex:(NSUInteger)theIndex;
 - (void)addMovieWatchWithSighting:(MovieWatch *)sighting;
+//- (void)deleteMoveWatch:(MovieWatch *)sighting;
+- (void)deleteMoveWatch:(NSUInteger)theDeleteIndex;
 @end
 
 

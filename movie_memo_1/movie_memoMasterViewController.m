@@ -53,7 +53,13 @@
 //
 - (void)viewDidLoad
 {
+    NSLog( @"「viewDidLoad」ですよ");
     [super viewDidLoad];
+
+    // 編集用のボタン
+    // self.editButtonItem.title = @"編集だぞ";
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
 }
 
 //
@@ -90,19 +96,43 @@
     return cell;
 }
 
+// 編集の可否
+// - 移動の可否などもあるらしい
+// - http://d.hatena.ne.jp/mtmtx/20120815/1345045066
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // 指定された項目を編集できるようにしないならばNOを返す。
-    // return YES;
-    return NO;
+    return YES;
+    // return NO;
+}
+
+// 編集時？のメソッド
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSLog(@"-----------");
+        NSLog(@"削除");
+        NSLog(@"selected tableview row is %ld",(long)indexPath.row);
+        NSLog(@"-----------");
+
+        [self.dataController deleteMoveWatch:0];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+
+        //[self.dataController deleteMoveWatch:deleteRowsAtIndexPaths:@[indexPath]];
+/*
+        [_objects removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ */
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // ShowMovieDetails
     if ([[segue identifier] isEqualToString:@"ShowMovieDetails"]) {
-movie_memoDetailViewController *detailViewController = [segue destinationViewController];
-detailViewController.movie = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
+        movie_memoDetailViewController *detailViewController = [segue destinationViewController];
+        detailViewController.movie = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
 
 }

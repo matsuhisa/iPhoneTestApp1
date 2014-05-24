@@ -10,11 +10,8 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *location;
 @property (nonatomic, strong) NSDate *date;
-//@property (nonatomic, assign) NSInteger *money;
 @property (nonatomic, assign) NSNumber *money;
 
-// 初期化？
+// 初期化
 -(id)initWithName:(NSString *)name location:(NSString *)location date:(NSDate *)date money:(NSNumber *)money;
-//-(id)initWithName:(NSString *)name location:(NSString *)location date:(NSDate *)date money:(NSInteger *)money;
-//-(id)initWithName:(NSString *)name location:(NSString *)location date:(NSDate *)date;
 @end

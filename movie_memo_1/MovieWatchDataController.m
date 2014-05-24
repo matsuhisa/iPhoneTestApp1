@@ -30,9 +30,7 @@
     NSDate *today = [NSDate date];
     NSNumber *money=@123;
     
-    //movie = [[MovieWatch alloc] initWithName:@"Pigeon" location:@"Everywhere" date:today money:@"string"];
-    //movie = [[MovieWatch alloc] initWithName:@"foo" location:@"bar" date:today];
-    movie = [[MovieWatch alloc] initWithName:@"桐島、部活辞める" location:@"豊島園" date:today money:money];
+    movie = [[MovieWatch alloc] initWithName:@"桐島、部活辞めるってよ" location:@"豊島園" date:today money:money];
     [self addMovieWatchWithSighting:movie];
 }
 
@@ -47,6 +45,20 @@
 - (void)addMovieWatchWithSighting:(MovieWatch *)movie {
     [self.masterMovieWatchList addObject:movie];
 }
+
+//
+- (void)deleteMoveWatch:(NSUInteger)theDeleteIndex {
+    NSLog(@"-----------");
+    NSLog(@"削除 deleteMoveWatch");
+    NSLog(@"selected tableview row is %ld",(long)theDeleteIndex);
+    NSLog(@"-----------");
+    [self.masterMovieWatchList removeObjectAtIndex:theDeleteIndex];
+}
+/*
+- (void)deleteMoveWatch:(MovieWatch *)movie {
+    [self.masterMovieWatchList removeObject:movie];
+}
+*/
 
 // 数える
 - (NSUInteger)countOfList {
