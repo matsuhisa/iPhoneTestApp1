@@ -2,11 +2,9 @@
 //  movie_memoDetailViewController.m
 //  movie_memo_1
 //
-//  Created by 松久浩伸 on 2014/05/10.
-//  Copyright (c) 2014年 ___FULLUSERNAME___. All rights reserved.
-//
 
 #import "movie_memoDetailViewController.h"
+#import "MovieWatch.h"
 
 @interface movie_memoDetailViewController ()
 - (void)configureView;
@@ -16,22 +14,33 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+//
+- (void)setMovie:(MovieWatch *) newMovie
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
+    if (_movie != newMovie) {
+        _movie = newMovie;
+        // ビューを更新する
         [self configureView];
     }
 }
 
+//
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    // ユーザインターフェイスを詳細アイテム用に更新する
+    MovieWatch *themovie = self.movie;
+    
+    static NSDateFormatter *formatter = nil;
+    if (formatter == nil) {
+        formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateStyle:NSDateFormatterMediumStyle];
+    }
+    
+    if(themovie) {
+        self.movieNameLabel.text     = themovie.name;
+        self.movieLocationLabel.text = themovie.location;
+        self.movieDateLabel.text     = [formatter stringFromDate:(NSDate *)themovie.date];
+        self.movieMoneyLabel.text    = [themovie.money stringValue];
     }
 }
 

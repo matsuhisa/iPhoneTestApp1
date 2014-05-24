@@ -2,15 +2,17 @@
 //  movie_memoDetailViewController.h
 //  movie_memo_1
 //
-//  Created by 松久浩伸 on 2014/05/10.
-//  Copyright (c) 2014年 ___FULLUSERNAME___. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 
-@interface movie_memoDetailViewController : UIViewController
+@class MovieWatch;
 
-@property (strong, nonatomic) id detailItem;
+@interface movie_memoDetailViewController : UITableViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) MovieWatch *movie;
+@property (weak, nonatomic) IBOutlet UILabel *movieNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *movieLocationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *movieDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *movieMoneyLabel;
+
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9363E85192BF251002D03FF /* AddMovieViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9363E84192BF251002D03FF /* AddMovieViewControllerTableViewController.m */; };
 		B9F31D4C191E6A3B0081F67F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F31D4B191E6A3B0081F67F /* Foundation.framework */; };
 		B9F31D4E191E6A3B0081F67F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F31D4D191E6A3B0081F67F /* CoreGraphics.framework */; };
 		B9F31D50191E6A3B0081F67F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F31D4F191E6A3B0081F67F /* UIKit.framework */; };
@@ -22,6 +23,8 @@
 		B9F31D70191E6A3B0081F67F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F31D4F191E6A3B0081F67F /* UIKit.framework */; };
 		B9F31D78191E6A3B0081F67F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9F31D76191E6A3B0081F67F /* InfoPlist.strings */; };
 		B9F31D7A191E6A3B0081F67F /* movie_memo_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F31D79191E6A3B0081F67F /* movie_memo_1Tests.m */; };
+		B9F31D85191E6C220081F67F /* MovieWatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F31D84191E6C220081F67F /* MovieWatch.m */; };
+		B9F31D88191E70CD0081F67F /* MovieWatchDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F31D87191E70CD0081F67F /* MovieWatchDataController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B9363E83192BF251002D03FF /* AddMovieViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMovieViewControllerTableViewController.h; sourceTree = "<group>"; };
+		B9363E84192BF251002D03FF /* AddMovieViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMovieViewControllerTableViewController.m; sourceTree = "<group>"; };
 		B9F31D48191E6A3B0081F67F /* movie_memo_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movie_memo_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F31D4B191E6A3B0081F67F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B9F31D4D191E6A3B0081F67F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,6 +61,10 @@
 		B9F31D75191E6A3B0081F67F /* movie_memo_1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "movie_memo_1Tests-Info.plist"; sourceTree = "<group>"; };
 		B9F31D77191E6A3B0081F67F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B9F31D79191E6A3B0081F67F /* movie_memo_1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = movie_memo_1Tests.m; sourceTree = "<group>"; };
+		B9F31D83191E6C220081F67F /* MovieWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieWatch.h; sourceTree = "<group>"; };
+		B9F31D84191E6C220081F67F /* MovieWatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieWatch.m; sourceTree = "<group>"; };
+		B9F31D86191E70CD0081F67F /* MovieWatchDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieWatchDataController.h; sourceTree = "<group>"; };
+		B9F31D87191E70CD0081F67F /* MovieWatchDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieWatchDataController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +127,12 @@
 				B9F31D5A191E6A3B0081F67F /* movie_memoAppDelegate.h */,
 				B9F31D5B191E6A3B0081F67F /* movie_memoAppDelegate.m */,
 				B9F31D5D191E6A3B0081F67F /* Main.storyboard */,
+				B9363E83192BF251002D03FF /* AddMovieViewControllerTableViewController.h */,
+				B9363E84192BF251002D03FF /* AddMovieViewControllerTableViewController.m */,
+				B9F31D83191E6C220081F67F /* MovieWatch.h */,
+				B9F31D84191E6C220081F67F /* MovieWatch.m */,
+				B9F31D86191E70CD0081F67F /* MovieWatchDataController.h */,
+				B9F31D87191E70CD0081F67F /* MovieWatchDataController.m */,
 				B9F31D60191E6A3B0081F67F /* movie_memoMasterViewController.h */,
 				B9F31D61191E6A3B0081F67F /* movie_memoMasterViewController.m */,
 				B9F31D63191E6A3B0081F67F /* movie_memoDetailViewController.h */,
@@ -255,10 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9F31D88191E70CD0081F67F /* MovieWatchDataController.m in Sources */,
 				B9F31D65191E6A3B0081F67F /* movie_memoDetailViewController.m in Sources */,
+				B9363E85192BF251002D03FF /* AddMovieViewControllerTableViewController.m in Sources */,
 				B9F31D58191E6A3B0081F67F /* main.m in Sources */,
 				B9F31D5C191E6A3B0081F67F /* movie_memoAppDelegate.m in Sources */,
 				B9F31D62191E6A3B0081F67F /* movie_memoMasterViewController.m in Sources */,
+				B9F31D85191E6C220081F67F /* MovieWatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +481,7 @@
 				B9F31D7F191E6A3B0081F67F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9F31D80191E6A3B0081F67F /* Build configuration list for PBXNativeTarget "movie_memo_1Tests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +490,7 @@
 				B9F31D82191E6A3B0081F67F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
