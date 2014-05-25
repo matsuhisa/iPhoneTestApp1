@@ -112,10 +112,11 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSLog(@"-----------");
         NSLog(@"削除");
-        NSLog(@"selected tableview row is %ld",(long)indexPath.row);
+        //NSLog(@"selected tableview row is %ld",(long)indexPath.row);
         NSLog(@"-----------");
 
-        [self.dataController deleteMoveWatch:0];
+        [self.dataController deleteMoveWatch:indexPath.row];
+        //[self.dataController deleteMoveWatch:0];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 
         //[self.dataController deleteMoveWatch:deleteRowsAtIndexPaths:@[indexPath]];

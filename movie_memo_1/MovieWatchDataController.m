@@ -50,7 +50,7 @@
 - (void)deleteMoveWatch:(NSUInteger)theDeleteIndex {
     NSLog(@"-----------");
     NSLog(@"削除 deleteMoveWatch");
-    NSLog(@"selected tableview row is %ld",(long)theDeleteIndex);
+    //NSLog(@"selected tableview row is %ld",(long)theDeleteIndex);
     NSLog(@"-----------");
     [self.masterMovieWatchList removeObjectAtIndex:theDeleteIndex];
 }
