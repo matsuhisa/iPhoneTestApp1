@@ -28,7 +28,7 @@
     self.masterMovieWatchList = sightingList;
     MovieWatch *movie;
     NSDate *today = [NSDate date];
-    NSNumber *money=@123;
+    NSNumber *money=@1800;
     
     movie = [[MovieWatch alloc] initWithName:@"桐島、部活辞めるってよ" location:@"豊島園" date:today money:money];
     [self addMovieWatchWithSighting:movie];
@@ -46,7 +46,7 @@
     [self.masterMovieWatchList addObject:movie];
 }
 
-//
+// 削除処理
 - (void)deleteMoveWatch:(NSUInteger)theDeleteIndex {
     NSLog(@"-----------");
     NSLog(@"削除 deleteMoveWatch");
@@ -54,21 +54,24 @@
     NSLog(@"-----------");
     [self.masterMovieWatchList removeObjectAtIndex:theDeleteIndex];
 }
-/*
-- (void)deleteMoveWatch:(MovieWatch *)movie {
-    [self.masterMovieWatchList removeObject:movie];
+
+// 並び替え
+- (void)moveMovieWatch:(NSUInteger *)fromIndex toIndex:(NSUInteger)toIndex {
+    NSLog(@"-----------");
+    NSLog(@"並び替え moveMovieWatch");
+    NSLog(@"-----------");
+    
+    [self.masterMovieWatchList exchangeObjectAtIndex:*fromIndex withObjectAtIndex:toIndex];
 }
-*/
 
 // 数える
 - (NSUInteger)countOfList {
     return [self.masterMovieWatchList count];
 }
 
-
+//
 - (MovieWatch *)objectInListAtIndex:(NSUInteger)theIndex {
     return [self.masterMovieWatchList objectAtIndex:theIndex];
 }
 
 @end
-

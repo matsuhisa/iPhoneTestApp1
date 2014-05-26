@@ -7,8 +7,6 @@
 
 @class MovieWatchDataController;
 
-
-
 @interface movie_memoMasterViewController : UITableViewController
 // DataController
 @property (strong, nonatomic) MovieWatchDataController *dataController;

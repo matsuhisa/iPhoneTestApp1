@@ -17,7 +17,7 @@
 @implementation movie_memoMasterViewController
 
 // ------------
-// 新規追加からの処理
+// 新規追加画面からの処理
 // ------------
 
 // 保存
@@ -43,6 +43,7 @@
 }
 
 // ------------
+// ------------
 
 - (void)awakeFromNib
 {
@@ -53,20 +54,17 @@
 //
 - (void)viewDidLoad
 {
-    NSLog( @"「viewDidLoad」ですよ");
     [super viewDidLoad];
 
     // 編集用のボタン
     // self.editButtonItem.title = @"編集だぞ";
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
 }
 
 //
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table View
@@ -97,7 +95,6 @@
 }
 
 // 編集の可否
-// - 移動の可否などもあるらしい
 // - http://d.hatena.ne.jp/mtmtx/20120815/1345045066
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -116,18 +113,33 @@
         NSLog(@"-----------");
 
         [self.dataController deleteMoveWatch:indexPath.row];
-        //[self.dataController deleteMoveWatch:0];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-
-        //[self.dataController deleteMoveWatch:deleteRowsAtIndexPaths:@[indexPath]];
-/*
-        [_objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- */
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
     }
 }
 
+// 行の移動
+// Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+     NSLog(@"-----------");
+     NSLog(@"行の移動");
+     NSLog(@"from %ld",(long)fromIndexPath.row);
+     NSLog(@"to   %ld",(long)toIndexPath.row);
+     NSLog(@"-----------");
+     
+     [self.dataController moveMovieWatch:(NSUInteger *)fromIndexPath.row toIndex:(NSUInteger)toIndexPath.row];
+
+ }
+
+
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+     return YES;
+ }
+
+// 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // ShowMovieDetails
@@ -135,7 +147,6 @@
         movie_memoDetailViewController *detailViewController = [segue destinationViewController];
         detailViewController.movie = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
-
 }
 
 @end
