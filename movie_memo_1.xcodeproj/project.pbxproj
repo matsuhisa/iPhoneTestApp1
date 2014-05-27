@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B9363E85192BF251002D03FF /* AddMovieViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9363E84192BF251002D03FF /* AddMovieViewControllerTableViewController.m */; };
+		B9A5BBE919352D8100282C71 /* EditMovieTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A5BBE819352D8100282C71 /* EditMovieTableViewController.m */; };
 		B9F31D4C191E6A3B0081F67F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F31D4B191E6A3B0081F67F /* Foundation.framework */; };
 		B9F31D4E191E6A3B0081F67F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F31D4D191E6A3B0081F67F /* CoreGraphics.framework */; };
 		B9F31D50191E6A3B0081F67F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F31D4F191E6A3B0081F67F /* UIKit.framework */; };
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		B9363E83192BF251002D03FF /* AddMovieViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMovieViewControllerTableViewController.h; sourceTree = "<group>"; };
 		B9363E84192BF251002D03FF /* AddMovieViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMovieViewControllerTableViewController.m; sourceTree = "<group>"; };
+		B9A5BBE719352D8100282C71 /* EditMovieTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMovieTableViewController.h; sourceTree = "<group>"; };
+		B9A5BBE819352D8100282C71 /* EditMovieTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMovieTableViewController.m; sourceTree = "<group>"; };
 		B9F31D48191E6A3B0081F67F /* movie_memo_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movie_memo_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F31D4B191E6A3B0081F67F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B9F31D4D191E6A3B0081F67F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +130,8 @@
 				B9F31D5A191E6A3B0081F67F /* movie_memoAppDelegate.h */,
 				B9F31D5B191E6A3B0081F67F /* movie_memoAppDelegate.m */,
 				B9F31D5D191E6A3B0081F67F /* Main.storyboard */,
+				B9A5BBE719352D8100282C71 /* EditMovieTableViewController.h */,
+				B9A5BBE819352D8100282C71 /* EditMovieTableViewController.m */,
 				B9363E83192BF251002D03FF /* AddMovieViewControllerTableViewController.h */,
 				B9363E84192BF251002D03FF /* AddMovieViewControllerTableViewController.m */,
 				B9F31D83191E6C220081F67F /* MovieWatch.h */,
@@ -276,6 +281,7 @@
 				B9F31D58191E6A3B0081F67F /* main.m in Sources */,
 				B9F31D5C191E6A3B0081F67F /* movie_memoAppDelegate.m in Sources */,
 				B9F31D62191E6A3B0081F67F /* movie_memoMasterViewController.m in Sources */,
+				B9A5BBE919352D8100282C71 /* EditMovieTableViewController.m in Sources */,
 				B9F31D85191E6C220081F67F /* MovieWatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
