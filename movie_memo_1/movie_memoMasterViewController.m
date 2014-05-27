@@ -30,7 +30,7 @@
             [self.dataController addMovieWatchWithSighting:addController.movieWatch];
             [[self tableView] reloadData];
         }
-        [self dismissViewControllerAnimated:YES completion:NULL];
+        //[self dismissViewControllerAnimated:YES completion:NULL];
     }
 }
 
@@ -38,7 +38,7 @@
 - (IBAction)cancel:(UIStoryboardSegue *)segue
 {
     if ([[segue identifier] isEqualToString:@"CancelInput"]) {
-        [self dismissViewControllerAnimated:YES completion:NULL];
+        //[self dismissViewControllerAnimated:YES completion:NULL];
     }
 }
 
@@ -54,11 +54,10 @@
 //
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-
     // 編集用のボタン
     // self.editButtonItem.title = @"編集だぞ";
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    [super viewDidLoad];
 }
 
 //

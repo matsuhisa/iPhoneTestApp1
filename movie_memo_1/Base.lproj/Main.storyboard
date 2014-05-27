@@ -326,10 +326,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="A6k-sI-f5w"/>
                     <connections>
-                        <outlet property="movieDateLabel" destination="wiW-D2-TsE" id="OqX-Ax-utl"/>
-                        <outlet property="movieLocationLabel" destination="9P8-GB-G1B" id="yI8-oz-Pp0"/>
-                        <outlet property="movieMoneyLabel" destination="kiZ-5b-d5Z" id="teJ-xp-3CN"/>
-                        <outlet property="movieNameLabel" destination="0ga-Nu-Jfw" id="137-Md-Z2t"/>
+                        <outlet property="movieDateLabel" destination="pmt-8t-6eb" id="sDf-IS-m2n"/>
+                        <outlet property="movieLocationLabel" destination="ynv-Bj-lWg" id="mVz-kN-brx"/>
+                        <outlet property="movieMoneyLabel" destination="gva-mV-VCq" id="2DU-bS-Eqd"/>
+                        <outlet property="movieNameLabel" destination="As6-xj-LRX" id="t6s-ok-7qW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usm-Yf-Vwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
