@@ -30,7 +30,7 @@
             [self.dataController addMovieWatchWithSighting:addController.movieWatch];
             [[self tableView] reloadData];
         }
-        //[self dismissViewControllerAnimated:YES completion:NULL];
+        [self dismissViewControllerAnimated:YES completion:NULL];
     }
 }
 
@@ -38,7 +38,7 @@
 - (IBAction)cancel:(UIStoryboardSegue *)segue
 {
     if ([[segue identifier] isEqualToString:@"CancelInput"]) {
-        //[self dismissViewControllerAnimated:YES completion:NULL];
+        [self dismissViewControllerAnimated:YES completion:NULL];
     }
 }
 
@@ -118,7 +118,6 @@
 }
 
 // 行の移動
-// Override to support rearranging the table view.
  - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
  {
      NSLog(@"-----------");
@@ -127,7 +126,7 @@
      NSLog(@"to   %ld",(long)toIndexPath.row);
      NSLog(@"-----------");
      
-     [self.dataController moveMovieWatch:(NSUInteger *)fromIndexPath.row toIndex:(NSUInteger)toIndexPath.row];
+     [self.dataController moveMovieWatch:(NSUInteger *)fromIndexPath.row toIndex:(NSUInteger *)toIndexPath.row];
 
  }
 

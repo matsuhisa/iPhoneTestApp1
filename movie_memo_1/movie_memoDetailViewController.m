@@ -5,12 +5,30 @@
 
 #import "movie_memoDetailViewController.h"
 #import "MovieWatch.h"
+#import "EditMovieTableViewController.h"
 
 @interface movie_memoDetailViewController ()
 - (void)configureView;
 @end
 
 @implementation movie_memoDetailViewController
+
+// 巻き戻しセグエ
+- (IBAction)editDone:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"ReturnEdit"])
+    {
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+}
+
+- (IBAction)editCancel:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"CancelEdit"])
+    {
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+}
 
 #pragma mark - Managing the detail item
 

@@ -6,12 +6,15 @@
 #import "MovieWatchDataController.h"
 #import "MovieWatch.h"
 
+
 // クラス拡張
 @interface MovieWatchDataController ()
 - (void)initializeDefaultDataList;
 @end
 
 @implementation MovieWatchDataController
+
+
 
 // 初期化の実行
 - (id)init {
@@ -56,12 +59,12 @@
 }
 
 // 並び替え
-- (void)moveMovieWatch:(NSUInteger *)fromIndex toIndex:(NSUInteger)toIndex {
+- (void)moveMovieWatch:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
     NSLog(@"-----------");
     NSLog(@"並び替え moveMovieWatch");
     NSLog(@"-----------");
     
-    [self.masterMovieWatchList exchangeObjectAtIndex:*fromIndex withObjectAtIndex:toIndex];
+    [self.masterMovieWatchList exchangeObjectAtIndex:fromIndex withObjectAtIndex:toIndex];
 }
 
 // 数える

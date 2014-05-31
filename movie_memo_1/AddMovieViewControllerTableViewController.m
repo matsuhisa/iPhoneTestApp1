@@ -3,14 +3,19 @@
 //  movie_memo_1
 //
 
-#import "AddMovieViewControllerTableViewController.h"
 #import "MovieWatch.h"
-
+#import "AddMovieViewControllerTableViewController.h"
+#import "EditMovieTableViewController.h"
 
 @interface AddMovieViewControllerTableViewController ()
 @end
 
 @implementation AddMovieViewControllerTableViewController
+
+
+
+//-----------
+//-----------
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

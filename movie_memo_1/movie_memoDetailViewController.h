@@ -15,4 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *movieDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *movieMoneyLabel;
 
+// 巻き戻しアクションメソッド
+- (IBAction)editDone:(UIStoryboardSegue *)segue;
+- (IBAction)editCancel:(UIStoryboardSegue *)segue;
+
 @end

@@ -9,4 +9,5 @@
 
 @interface EditMovieTableViewController : UITableViewController
 <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *EditNameInput;
 @end
